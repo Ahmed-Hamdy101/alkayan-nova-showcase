@@ -187,43 +187,7 @@ erDiagram
 
 ## Authentication Flow
 
-```mermaid
-sequenceDiagram
-    participant User as User/Admin
-    participant Browser as Browser
-    participant Server as Server
-    participant DB as Database
-    participant Session as Session Storage
-
-    User->>Browser: Enter Credentials
-    Browser->>Server: POST /login (username, password)
-    Server->>Server: Validate Input
-    Server->>DB: Query User by Username
-    DB-->>Server: Return User Record
-    
-    alt User Found
-        Server->>Server: Hash & Verify Password
-        alt Password Valid
-            Server->>Session: Create Session
-            Session->>Browser: Set Session Cookie
-            Server->>Browser: 200 OK + Redirect to Dashboard
-            Browser->>User: ✅ Login Successful
-        else Password Invalid
-            Server->>Browser: 401 Unauthorized
-            Browser->>User: ❌ Invalid Credentials
-        end
-    else User Not Found
-        Server->>Browser: 401 Unauthorized
-        Browser->>User: ❌ Invalid Credentials
-    end
-
-    User->>Browser: Click Logout
-    Browser->>Server: GET /logout
-    Server->>Session: Destroy Session
-    Session->>Browser: Clear Session Cookie
-    Server->>Browser: Redirect to Login
-    Browser->>User: ✅ Logout Successful
-```
+> **Note:** Authentication and identity management are decoupled from this core application. Authentication services have been migrated to a dedicated subdomain (`realstate.alkayan-co.com`) and are operated as an independent microservice/server module.
 
 ## API Endpoints & Request-Response Flow
 
