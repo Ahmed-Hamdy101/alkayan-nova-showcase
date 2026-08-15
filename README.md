@@ -481,6 +481,6 @@ graph LR
 
 ## License
 
-MIT License. See `LICENSE` (if present) or refer to the included license text below.
+MIT License. See `LICENSE`
 
 
