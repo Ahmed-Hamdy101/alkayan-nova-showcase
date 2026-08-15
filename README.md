@@ -1,6 +1,6 @@
 # Alkayan Nova (PHP Project)
 
-This repository contains a PHP-based website/application for Alkayan Construction, built with a simple MVC-like structure (controllers, models, views) and a public entry point under `public/`.
+This repository contains a document for Alkayan Construction Nova, it runs on business tier, built with a simple MVC-like structure (controllers, models, views) and a public entry point under `public/`.
 
 ## Features
 
