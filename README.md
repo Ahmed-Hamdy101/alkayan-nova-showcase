@@ -281,8 +281,8 @@ graph TD
     F -->|SQL Query| G["MySQL Database"]
     G -->|Result Set| F
     
-    F -->|[Projects Array]| D
-    F -->|[Projects Array]| E
+    F -->|Projects Array| D
+    F -->|Projects Array| E
     
     D -->|json_encode| H["JSON Response"]
     E -->|Pass to View| I["View Template<br/>construction/list.php"]
