@@ -45,7 +45,7 @@ This returns JSON for the requested project type id (`tid`) and pagination.
 
 ```mermaid
 graph TB
-    Client["🌐 Client Browser"]
+    Client["Client Browser"]
     
     subgraph WebServer["Web Server (Apache/Nginx)"]
         FrontController[".htaccess Router"]
